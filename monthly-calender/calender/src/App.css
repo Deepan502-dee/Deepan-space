@@ -1,0 +1,103 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh; /* Ensure it covers the full height */
+  background: rgb(125, 172, 82);
+}
+
+.main-container {
+  margin-top: 20px;
+  width: 400px;
+  background: #fff;
+  border-radius: 8px; /* Add rounded corners */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+  overflow: hidden; /* Prevent overflow on rounded corners */
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  background: rgb(126, 126, 204);
+  color: white;
+}
+
+.select {
+  display: flex;
+  gap: 16px;
+}
+
+.arrow {
+  width: 22px;
+  height: 22px;
+}
+
+button {
+  background: none;
+  cursor: pointer;
+  border: none;
+}
+
+select {
+  border-radius: 4px;
+  border: 1px solid #007bff; /* Use a softer blue */
+  padding: 4px;
+  margin: 4px 0;
+  outline: none;
+  transition: border-color 0.3s; /* Add transition for interaction */
+}
+
+select:focus {
+  border-color: #0056b3; /* Darker blue on focus */
+}
+
+.week {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background: rgb(126, 126, 204);
+  margin-bottom: 10px;
+  padding: 10px 0; /* Vertical padding */
+}
+
+.week div {
+  color: #fff;
+  cursor: pointer;
+  font-weight: bold; /* Make the weekday headers bold */
+}
+
+.days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 8px;
+  padding: 20px;
+}
+
+.day, .empty {
+  padding: 10px;
+  border: 1px solid #007bff; /* Consistent border color */
+  border-radius: 4px; /* Rounded corners for days */
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s; /* Add transition for hover effect */
+}
+
+.day:hover {
+  background-color: rgba(0, 123, 255, 0.1); /* Light blue on hover */
+}
+
+.empty {
+  background-color: #f8f9fa; /* Light gray for empty days */
+}
+
+.empty:hover {
+  cursor: default; /* Disable hover effect for empty days */
+}
